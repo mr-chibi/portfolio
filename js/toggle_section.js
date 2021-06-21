@@ -4,9 +4,6 @@ let dropmenu_section = document.getElementsByClassName("dropmenu_section");
 let dropmenu_total = dropmenu.length;
 
 
-// Open First Section:
-dropmenu_section[0].style.display = "block";
-
 // Run Loop:
 for(let i = 0; i < dropmenu_total; i++) {
 
