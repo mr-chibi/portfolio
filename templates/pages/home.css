@@ -49,6 +49,11 @@
 #dimensions { grid-area: dimensions; }
 #assets { grid-area: assets; }
 
+
+figure.datapacks {
+	border: 6px double rgba(0, 0, 0, 0.25);
+}
+
 @media screen and (max-width: 425px) {
 	figure.datapacks {
 		margin: auto;
