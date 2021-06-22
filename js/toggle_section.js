@@ -21,10 +21,12 @@ for(let i = 0; i < dropmenu_total; i++) {
 		for(let j = 0; j < dropmenu_section.length; j++) {
 
 			dropmenu_section[j].style.display = "none";
+			dropmenu_section[i].style.animation = "fadeOut 0.8s";
 		}
 
 		// Open Selected Section:
-		dropmenu_section[i].style.display = "block";		
+		dropmenu_section[i].style.display = "block";
+		dropmenu_section[i].style.animation = "fadeIn 0.8s";		
 		}
 	});
 }

@@ -79,6 +79,10 @@ figure.datapacks img {
 	height: 300px;
 }
 
+figure.datapacks img:hover {
+	animation: Zoom 500ms;
+}
+
 figure.datapacks figcaption.modal-btn {
 	padding: 5%;
 	text-align: center;
@@ -196,4 +200,21 @@ section.model-info {
 	width: 64%;
 	padding: 3%;
 	overflow-y: auto;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0%;
+	}
+
+	to {
+		opacity: 100%;
+	}
+}
+
+@keyframes Zoom {
+	to {
+		transform: scale(1.1);
+		z-index: 3;
+	}
 }
