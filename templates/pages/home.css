@@ -1,0 +1,79 @@
+.grid-datapacks {
+	display: grid;
+	grid-gap: 15px;
+	grid-template-areas:
+	"mmo mmo_quests player_shops permissions"
+	"storage claims dimensions assets";
+}
+
+@media screen and (max-width: 768px) {
+	.grid-datapacks {
+		grid-template-areas:
+		"mmo mmo_quests player_shops"
+		"permissions storage claims" 
+		"dimensions assets .";
+	}
+}
+
+@media screen and (max-width: 575px) {
+	.grid-datapacks {
+		grid-template-areas:
+		"mmo mmo_quests"
+		"player_shops permissions"
+		"storage claims" 
+		"dimensions assets";
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.grid-datapacks {
+		grid-template-areas:
+		"mmo"
+		"mmo_quests"
+		"player_shops"
+		"permissions"
+		"storage" 
+		"claims" 
+		"dimensions"
+		"assets";
+	}
+}
+
+#datapacks-title { grid-area: title; text-align: center; }
+#mmo { grid-area: mmo; }
+#mmo_quests { grid-area: mmo_quests; }
+#player_shops { grid-area: player_shops; }
+#permissions { grid-area: permissions; }
+#storage { grid-area: storage; }
+#claims { grid-area: claims; }
+#dimensions { grid-area: dimensions; }
+#assets { grid-area: assets; }
+
+@media screen and (max-width: 425px) {
+	figure.datapacks {
+		margin: auto;
+	}
+}
+
+figure.datapacks img.modal-btn {
+	height: 300px;
+}
+
+figure.datapacks:hover {
+	animation: Zoom 500ms;
+}
+
+figure.datapacks:hover figcaption:after {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.45);
+	color: #fff;
+	cursor: pointer;
+	content: "Click to view more information";
+}

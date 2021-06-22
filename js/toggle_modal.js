@@ -54,7 +54,7 @@ for(let i = 0; i < modal_total; i++) {
 		// Open Selected Section:
 		overlay.style.display = "block";
 		overlay.style.animation = "fadeIn 0.8s";
-		modal[i].style.display = "flex";		
+		modal[i].style.display = "block";		
 		}
 	});
 }
