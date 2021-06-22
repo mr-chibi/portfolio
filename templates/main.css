@@ -72,23 +72,31 @@ h6 { font-size: 14pt; }
 #assets { grid-area: assets; }
 
 figure.datapacks {
+	position: relative;
 	border: 1px solid #cccccc;
 }
 
-figure.datapacks img {
+figure.datapacks img.modal-btn {
 	height: 300px;
 }
 
-figure.datapacks img:hover {
+figure.datapacks:hover {
 	animation: Zoom 500ms;
 }
 
-figure.datapacks figcaption.modal-btn {
-	padding: 5%;
-	text-align: center;
-	background: #202020;
-	color: #c9c9c9;
+figure.datapacks:hover figcaption:after {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.45);
+	color: #fff;
 	cursor: pointer;
+	content: "Click to view more information";
 }
 
 #overlay {

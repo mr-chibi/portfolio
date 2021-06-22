@@ -18,6 +18,17 @@ for(let c = 0; c < modal_total; c++) {
 		overlay.style.display = "none";
 		modal[c].style.display = "none";
 	});
+
+
+	// User, pressed, "Esc" Close Window:
+	document.addEventListener("keydown", function(e) {
+
+		if(e.keyCode == 27) {
+
+			overlay.style.display = "none";
+			modal[c].style.display = "none";
+		}
+	});
 }
 
 
