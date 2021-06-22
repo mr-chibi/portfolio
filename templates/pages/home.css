@@ -4,6 +4,7 @@
 	grid-template-areas:
 	"mmo mmo_quests player_shops permissions"
 	"storage claims dimensions assets";
+	animation: fadeIn 2s;
 }
 
 @media screen and (max-width: 768px) {
