@@ -8,54 +8,64 @@
 	<link rel="stylesheet" type="text/css" href="templates/config.css">
 </head>
 <body>
+<section style="background: #41474F; color: #F0C30E;">	
 	<div class="wrapper">
-		<h2 align="center">Mr_Chibi's Datapack Versions Library: (<span id="count_datapacks"></span>)</h2>
+		<h2 align="center" style="padding: 2%;">Mr_Chibi's Datapack Versions Library: (<span id="count_datapacks"></span>)</h2>
+
+		<div class="page">
+			<section class="datapacks-section">
+				<figure class="datapacks modal-btn" id="mmo">
+					<img src="images/datapacks/mmo.png" />
+					<figcaption><figcaption>
+				</figure>
+
+				<figure class="datapacks modal-btn" id="mmo_quests">
+					<img src="images/datapacks/quests.png" />
+					<figcaption><figcaption>
+				</figure>
+
+				<figure class="datapacks modal-btn" id="player_shops">
+					<img src="images/datapacks/player_shops.png" />
+					<figcaption><figcaption>
+				</figure>
+
+				<figure class="datapacks modal-btn" id="permissions">
+					<img src="images/datapacks/permissions.png" />
+					<figcaption><figcaption>
+				</figure>
+			</section>
+		</div>
+
+
+		<div class="page">
+			<section class="datapacks-section">
+				<figure class="datapacks modal-btn" id="storage">
+					<img src="images/datapacks/storage.png" />
+					<figcaption><figcaption>
+				</figure>
+
+				<figure class="datapacks modal-btn" id="claims">
+					<img src="images/datapacks/claims.png" />
+					<figcaption><figcaption>
+				</figure>
+
+				<figure class="datapacks modal-btn" id="dimensions">
+					<img src="images/datapacks/dimensions.png" />
+					<figcaption><figcaption>
+				</figure>
+
+				<figure class="datapacks modal-btn" id="assets">
+					<img src="images/datapacks/assets.png" />
+					<figcaption><figcaption>
+				</figure>
+			</section>
+		</div>
 	</div>
 
-	<div class="wrapper">
-		<section class="grid-datapacks">
-
-			<figure class="datapacks modal-btn" id="mmo">
-				<img src="images/datapacks/mmo.png" />
-				<figcaption><figcaption>
-			</figure>
-
-			<figure class="datapacks modal-btn" id="mmo_quests">
-				<img src="images/datapacks/quests.png" />
-				<figcaption><figcaption>
-			</figure>
-
-			<figure class="datapacks modal-btn" id="player_shops">
-				<img src="images/datapacks/player_shops.png" />
-				<figcaption><figcaption>
-			</figure>
-
-			<figure class="datapacks modal-btn" id="permissions">
-				<img src="images/datapacks/permissions.png" />
-				<figcaption><figcaption>
-			</figure>
-
-			<figure class="datapacks modal-btn" id="storage">
-				<img src="images/datapacks/storage.png" />
-				<figcaption><figcaption>
-			</figure>
-
-			<figure class="datapacks modal-btn" id="claims">
-				<img src="images/datapacks/claims.png" />
-				<figcaption><figcaption>
-			</figure>
-
-			<figure class="datapacks modal-btn" id="dimensions">
-				<img src="images/datapacks/dimensions.png" />
-				<figcaption><figcaption>
-			</figure>
-
-			<figure class="datapacks modal-btn" id="assets">
-				<img src="images/datapacks/assets.png" />
-				<figcaption><figcaption>
-			</figure>
-		</section>
-	</div>
+	<nav class="num-menu">
+		<ul class="wrapper" id="page_nav"></ul>
+	</nav>
+</section>
 
 
 	<div id="overlay">
@@ -382,8 +392,6 @@
 				</section>
 			</div>
 		</section>
-
-
 	</div>
 
 	<!-- Count Datapacks -->
@@ -395,5 +403,6 @@
 	<!-- Modals & Dropmenus -->
 	<script type="text/javascript" src="js/toggle_modal.js"></script>
 	<script type="text/javascript" src="js/toggle_section.js"></script>
+	<script type="text/javascript" src="js/pages.js"></script>
 </body>
 </html>
