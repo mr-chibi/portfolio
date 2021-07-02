@@ -33,6 +33,7 @@ figure figcaption.caption {
 }
 
 h1,h2,h3,h4,h5,h6 {
+	font-weight: normal;
 	font-family: 'Roboto Condensed', sans-serif;
 	margin: 0;
 }
@@ -44,9 +45,65 @@ h4 { font-size: 18pt; }
 h5 { font-size: 16pt; }
 h6 { font-size: 14pt; }
 
+.text-bold {
+	font-weight: bold;
+}
+
+.text-normal {
+	font-weight: normal;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+
 /**/
 .wrapper {
 	margin: auto;
-	padding: 1.5%;
 	max-width: 1200px;
+}
+
+.flex-wrapper-row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: auto;
+	padding: 2% 0%;
+	max-width: 1200px;
+}
+
+.container {
+	scroll-snap-type: y mandatory;
+}
+
+section:nth-child(1) {
+	background: #32609F;
+}
+
+.col3 {
+	margin: 1%;
+	padding: 3%;
+	width: 25%;
+	background: #fff;
+}
+
+.col5 {
+	margin: 1%;
+	width: 45%;
+	border: 1px solid #ccc;
+}
+
+.col10 {
+	margin: 1%;
+	padding: 3%;
+	width: 92%;
 }

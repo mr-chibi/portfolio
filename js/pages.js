@@ -11,18 +11,6 @@ let total_pages = pages.length;
 // Display First page:
 pages[first_page].style.display = "block";
 
-// Previous Page:
-pg_nav.innerHTML+="<li onclick='next_page(-1)'><</li>";	
-
-// Display Navigation:
-for(let i = 0; i < total_pages; i++) {
-
-	pg_nav.innerHTML+="<li onclick='toggle_page("+i+")'>"+(i + 1)+"</li>";	
-}
-
-// Next Page
-pg_nav.innerHTML+="<li onclick='next_page(1)'>></li>";	
-
 
 function next_page(id) {
 

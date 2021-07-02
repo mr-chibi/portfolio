@@ -1,4 +1,66 @@
-section.datapacks-section {
+section#about {
+	background: #F1F1F1;
+	padding: 1.5%;
+}
+
+section#about .title {
+	font-size: 50px;
+	padding: 1%;
+}
+
+section#about .subtitle {
+	padding: 1%;
+}
+
+section#datapacks {
+	background: #102756;
+}
+
+
+header.heading {
+	position: sticky;
+	top: 0;
+	z-index: 1;
+	background: #fff;
+}
+
+nav.navigation {
+	display: flex;
+}
+
+nav.navigation ul.logo-nav,
+nav.navigation ul.main-nav {
+	margin: 0;
+	padding: 1% 0%;
+	list-style-type: none;
+}
+
+nav.navigation ul.logo-nav {
+	flex-grow: 0.9;
+	justify-content: flex-start;
+}
+
+nav.navigation ul.logo-nav h2 {
+	display: flex;
+	height: 100%;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+nav.navigation ul.main-nav {
+	display: flex;
+	flex-grow: 3;
+	justify-content: flex-end;
+}
+
+nav.navigation ul.main-nav li {
+	text-transform: uppercase;
+	padding: 3%;
+}
+
+
+.datapacks-section {
 	position: relative;
 	display: flex;
 	flex-direction: row;
@@ -8,7 +70,7 @@ section.datapacks-section {
 
 figure.datapacks {
 	margin: 0.5%;
-	width: 23%;
+	width: 23.8%;
 	border: 1px solid rgba(255, 255, 255, 0.10);
 }
 
@@ -67,5 +129,10 @@ figure.datapacks:hover figcaption:after {
 
 nav.num-menu {
 	background: #101010;
-	border-bottom: 5px double #101010;
+}
+
+footer {
+	padding: 1.5%;
+	background: #101010;
+	color: #f9f9f9;
 }

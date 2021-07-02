@@ -8,66 +8,127 @@
 	<link rel="stylesheet" type="text/css" href="templates/config.css">
 </head>
 <body>
-<section style="background: #41474F; color: #F0C30E;">	
-	<div class="wrapper">
-		<h2 align="center" style="padding: 2%;">Mr_Chibi's Datapack Versions Library: (<span id="count_datapacks"></span>)</h2>
+	<header class="heading">
+		<nav class="navigation wrapper">
+			<ul class="logo-nav">
+				<h2 class="text-bold">Mr_Chibi's Datapacks</h2>
+			</ul>
 
-		<div class="page">
-			<section class="datapacks-section">
-				<figure class="datapacks modal-btn" id="mmo">
-					<img src="images/datapacks/mmo.png" />
-					<figcaption><figcaption>
-				</figure>
+			<ul class="main-nav">
+				<li><a href="#about">About</a></li>
+				<li><a href="#datapacks">Datapacks</a></li>
+			</ul>
+		</nav>
+	</header>
 
-				<figure class="datapacks modal-btn" id="mmo_quests">
-					<img src="images/datapacks/quests.png" />
-					<figcaption><figcaption>
-				</figure>
+	<section id="about">
+		<div class="flex-wrapper-row">
 
-				<figure class="datapacks modal-btn" id="player_shops">
-					<img src="images/datapacks/player_shops.png" />
-					<figcaption><figcaption>
-				</figure>
+			<div class="col10 text-center">
+				<h6 class="subtitle">Hello, there I'm</h6>
+				<h1 class="title text-bold">Mr_Chibi</h1>
+				<h6 class="subtitle">Web Developer / Minecraft Datapack Developer</h6>
+			</div>
 
-				<figure class="datapacks modal-btn" id="permissions">
-					<img src="images/datapacks/permissions.png" />
-					<figcaption><figcaption>
-				</figure>
-			</section>
+			<div class="col3">
+				<h1 class="text-center">Introduction</h1>
+				<p>Hello my name is Mr_Chibi! I'm a certified web developer!</p>
+
+				<p>I like to develop things, find interests in things things that are not accessible to regular vanilla Minecraft and create them from scratch.</p>
+			</div>
+
+
+			<div class="col3">
+				<h1 class="text-center">Skills & Strengths:</h1>
+				<ul>
+					<li>Quick learning</li>
+					<li>Multi-Tasking</li>
+					<li>Organized</li>
+					<li>Self-Motivated</li>
+					<li>Project Management</li>
+					<li>Adobe Skills (Adobe Photoshop, Illustrator)</li>
+					<li>HTML, CSS, Javascript, Jquery, SQL, and PHP, Mcfunction</li>
+				</ul>
+			</div>
+
+
+			<div class="col3">
+				<h1 class="text-center">Coming soon</h1>
+			</div>
 		</div>
+	</section>
 
 
-		<div class="page">
-			<section class="datapacks-section">
-				<figure class="datapacks modal-btn" id="storage">
-					<img src="images/datapacks/storage.png" />
-					<figcaption><figcaption>
-				</figure>
 
-				<figure class="datapacks modal-btn" id="claims">
-					<img src="images/datapacks/claims.png" />
-					<figcaption><figcaption>
-				</figure>
+	<section id="datapacks">
+		<div class="flex-wrapper-row">
 
-				<figure class="datapacks modal-btn" id="dimensions">
-					<img src="images/datapacks/dimensions.png" />
-					<figcaption><figcaption>
-				</figure>
+			<div class="col10 text-center">
+				<h1 style="color: #F9D300;">Mr_Chibi's Datapack Library (<span id="count_datapacks"></span>)</h1>
+				<p style="color: #fefefe;">Browse, Share, & Download Previous Versions!</p>
+			</div>
 
-				<figure class="datapacks modal-btn" id="assets">
-					<img src="images/datapacks/assets.png" />
-					<figcaption><figcaption>
-				</figure>
-			</section>
+
+			<div class="col10">
+				<ul id="page_nav">
+
+					<div class="page">
+						<div class="datapacks-section">
+							<figure class="datapacks modal-btn" id="mmo">
+								<img src="images/datapacks/mmo.png" />
+								<figcaption><figcaption>
+							</figure>
+
+							<figure class="datapacks modal-btn" id="mmo_quests">
+								<img src="images/datapacks/quests.png" />
+								<figcaption><figcaption>
+							</figure>
+
+							<figure class="datapacks modal-btn" id="player_shops">
+								<img src="images/datapacks/player_shops.png" />
+								<figcaption><figcaption>
+							</figure>
+
+							<figure class="datapacks modal-btn" id="permissions">
+								<img src="images/datapacks/permissions.png" />
+								<figcaption><figcaption>
+							</figure>
+						</div>
+					</div>
+
+
+					<div class="page">
+						<div class="datapacks-section">
+							<figure class="datapacks modal-btn" id="storage">
+								<img src="images/datapacks/storage.png" />
+								<figcaption><figcaption>
+							</figure>
+
+							<figure class="datapacks modal-btn" id="claims">
+								<img src="images/datapacks/claims.png" />
+								<figcaption><figcaption>
+							</figure>
+
+							<figure class="datapacks modal-btn" id="dimensions">
+								<img src="images/datapacks/dimensions.png" />
+								<figcaption><figcaption>
+							</figure>
+
+							<figure class="datapacks modal-btn" id="assets">
+								<img src="images/datapacks/assets.png" />
+								<figcaption><figcaption>
+							</figure>
+						</div>
+					</div>
+
+					<li class="next" onclick="next_page(1)">></li>
+					<li class="prev" onclick="next_page(-1)"><</li>
+				</ul>
+			</div>
 		</div>
-	</div>
+	</section>
 
-	<nav class="num-menu">
-		<ul class="wrapper" id="page_nav"></ul>
-	</nav>
-</section>
-
-
+	
 	<div id="overlay">
 		<section class="modal">
 			<nav class="model-nav">
@@ -298,11 +359,7 @@
 					<figure>
 						<img src="images/datapacks/claims.png" />
 					</figure>
-
-					<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/kh5j0ko015grfad/claim_protection%201.16.5%20full%20release%20v1.4%20Full%20Release.zip?dl=0" target="_blank">Mr_Chibi's Claims 1.17</a></li>
-					</ul>
+					
 
 					<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
 					<ul class="dropmenu_section">
@@ -394,10 +451,18 @@
 		</section>
 	</div>
 
-	<!-- Count Datapacks -->
+
+	<footer>
+		<div class="wrapper text-center">
+			<p>Webpage Created in HTML/CSS, By Mr_Chibi</p>
+		</div>
+	</footer>
+
+	<!-- -->
 	<script type="text/javascript">
-		let total_packs = document.getElementsByClassName("datapacks").length;
-		document.getElementById("count_datapacks").innerHTML=total_packs;
+		let count_datapacks = document.getElementById("count_datapacks");
+		let datapacks = document.getElementsByClassName("datapacks");
+		count_datapacks.innerHTML=datapacks.length;
 	</script>
 
 	<!-- Modals & Dropmenus -->

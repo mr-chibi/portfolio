@@ -3,13 +3,14 @@
 }
 
 ul#page_nav {
+	position: relative;
+	margin: 0;
 	padding: 0;
 	list-style-type: none;
 	text-align: center;
 }
 
 ul#page_nav li {
-	display: inline-block;
 	padding: 2%;
 	border-left: 1px solid #202020;
 	border-right: 1px solid #606060;
@@ -17,12 +18,19 @@ ul#page_nav li {
 	text-align: center;
 	color: #fefefe;
 	background: #404040;
+	z-index: 3;
 }
 
-ul#page_nav li:first-child {
+ul#page_nav li.next {
+	position: absolute;
+	top: 40%;
+	right: -3%;
 	background: #303030;
 }
 
-ul#page_nav li:last-child {
+ul#page_nav li.prev {
+	position: absolute;
+	top: 40%;
+	left: -3%;
 	background: #303030;
 }
