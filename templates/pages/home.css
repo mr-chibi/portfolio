@@ -22,6 +22,9 @@ header.heading {
 	top: 0;
 	z-index: 1;
 	background: #545454;
+	-webkit-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.20);
+	-moz-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.20);
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.20);
 }
 
 header.heading form {
