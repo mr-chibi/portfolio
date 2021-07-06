@@ -13,7 +13,7 @@ section#about .subtitle {
 }
 
 section#datapacks {
-	background: #102756;
+	background: #11244B;
 }
 
 
@@ -21,7 +21,11 @@ header.heading {
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	background: #fff;
+	background: #545454;
+}
+
+header.heading form {
+	background: #686868;
 }
 
 nav.navigation {
@@ -44,8 +48,10 @@ nav.navigation ul.logo-nav h2 {
 	display: flex;
 	height: 100%;
 	margin: auto;
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
+	color: #BCBCBC;
+	font-weight: normal;
 }
 
 nav.navigation ul.main-nav {
@@ -59,6 +65,17 @@ nav.navigation ul.main-nav li {
 	padding: 3%;
 }
 
+nav.navigation ul.main-nav li.active,
+nav.navigation ul.main-nav li.active a {
+	font-weight: bold;
+	color: #95B8FF;
+}
+
+nav.navigation ul.main-nav li,
+nav.navigation ul.main-nav li a {
+	color: #BCBCBC;
+}
+
 
 .datapacks-section {
 	position: relative;
@@ -69,7 +86,7 @@ nav.navigation ul.main-nav li {
 
 
 figure.datapacks {
-	margin: 0.5%;
+	margin: 2% 0.5%;
 	width: 23.8%;
 	border: 1px solid rgba(255, 255, 255, 0.10);
 }
@@ -107,12 +124,11 @@ figure.datapacks {
 figure.datapacks img.modal-btn {
 	height: 300px;
 }
-
 figure.datapacks:hover {
 	animation: Zoom 500ms;
 }
 
-figure.datapacks:hover figcaption:after {
+figure.datapacks:hover figcaption.more_info:after {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -127,12 +143,31 @@ figure.datapacks:hover figcaption:after {
 	content: "Click to view more information";
 }
 
+figure.datapacks figcaption.keywords {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	bottom: -5%;
+	left: 15%;
+	right: 15%;
+	padding: 2%;
+	background: #101010;
+	border: 1px solid #404040;
+	color: #95B8FF;
+}
+
+figure.datapacks:hover figcaption.keywords,
+figure.datapacks figcaption.keywords:hover {
+	display: none;
+}
+
 nav.num-menu {
 	background: #101010;
 }
 
 footer {
 	padding: 1.5%;
-	background: #101010;
-	color: #f9f9f9;
+	background: #25282F;
+	color: #95B8FF;
 }
