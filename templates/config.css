@@ -214,6 +214,12 @@ figure.feat-img:hover {
 	animation: zoom 500ms;
 }
 
+section#search-packs {
+	position: sticky;
+	top: 0px;
+	z-index: 3;
+}
+
 .col3 {
 	margin: 1%;
 	padding: 1%;
@@ -304,7 +310,7 @@ figure.pack figcaption {
 	left: 0;
 	right: 0;
 	background: rgba(0, 0, 0, 0.85);
-	z-index: 2;
+	z-index: 4;
 }
 
 .pack_modal {
@@ -319,7 +325,7 @@ figure.pack figcaption {
 	max-height: 768px;
 	border: 1px solid #aaa;
 	background: #fefefe;
-	z-index: 3;
+	z-index: 4;
 	overflow-x: hidden;
 	overflow-y: auto;
 }
