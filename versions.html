@@ -2,529 +2,499 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
 	<meta name="description" content="Browse, Share, & Download datapacks created by Mr_Chibi!">
-	<title>Mr_Chibi's Datapack Versions</title>
+	<title>Versions &mdash; Mr_Chibi's Datapacks</title>
 	<link rel="stylesheet" type="text/css" href="templates/config.css">
 </head>
 <body>
-	<header class="heading">
-		<nav class="navigation wrapper">
-			<ul class="logo-nav">
-				<h2 class="text-bold">Mr_Chibi's Datapacks</h2>
-			</ul>
+	<header class="heading-2">
+		<nav class="navigation">
+			<div class="flex-wrapper-row">
+				<ul class="logo-wrapper">
+					<li>Mr_Chibi's Datapacks</li>
+				</ul>
 
-			<ul class="main-nav">
-				<li class="active"><a href="/portfolio/versions">Home</a></li>
-				<li><a href="/portfolio/about">About</a></li>
-				<li><a href="https://github.com/mr-chibi" target="_blank">GitHub</a></li>
-			</ul>
-		</nav>
-
-		<form onsubmit="return false" style="padding: 0.5% 1%;">
-			<fieldset class="wrapper" id="datapacks-search-results"></fieldset>
-
-			<fieldset class="wrapper">
-				<input type="search" id="filter-datapacks" autocomplete="off" placeholder="Enter a datapack you'd like to search for..." style="width: 98%; padding: 1.3% 2%; border: 1px solid #D2D2D2; border-radius: 10px;" />
-			</fieldset>
-		</form>
-	</header>
-
-	
-	<section id="datapacks">
-		<div class="flex-wrapper-row">
-
-			<div class="col10 text-center">
-				<h1 style="color: #F9D300;">Mr_Chibi's Datapack Library (<span id="count_datapacks"></span>)</h1>
-				<p style="color: #fefefe;">Browse, Share, & Download Previous Versions!</p>
-
-				<ul id="page_nav">
-
-					<div class="page">
-						<div class="datapacks-section" id="datapacks-list"></div>
-					</div>
+				<ul class="nav-wrapper">
+					<li><a href="/portfolio/index">Home</a></li>
+					<li><a href="/portfolio/about">About</a></li>
+					<li class="active"><a href="/portfolio/versions">Datapacks</a></li>
+					<li><a href="https://github.com/mr-chibi" target="_blank">Github</a></li>
 				</ul>
 			</div>
+		</nav>
+	</header>
+
+
+	<section style="background: #172036;">
+		<div class="flex-wrapper-row">
+			<form class="col10" onsubmit="return false;">
+				<fieldset class="col10 text-center white">
+					<h1 style="padding: 1%; color: gold;">Mr_Chibi's Datapack Library (<span class="count_packs"></span>)</h1>
+					<h4 style="padding: 2%;">Browse, Share, & Download Previous Versions!</h4>
+				</fieldset>
+
+				<fieldset>
+					<input type="search" id="datapack_search" placeholder="Enter a datapack you'd like to search..." autocomplete="off" list="suggestions">
+
+					<datalist id="suggestions"></datalist>
+				</fieldset>
+			</form>
 		</div>
 	</section>
 
-	
-	<div id="overlay">
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
-			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/mmo.png" />
-					</figure>
 
-					<h6 class="dropmenu_title">Resource Pack</h6>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/do8no70us0zlv9l/Mr_ChibisMMO_Pack_v1.zip?dl=0" target="_blank">Resoucepack ver. 1</a></li>
-					</ul>
+	<section>
+		<!-- -->
+		<div class="flex-wrapper-row fadeIn" id="datapacks"></div>
 
-
-					<h6 class="dropmenu_title">Datapack Version 1.17:</h6>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/zudpwsz0vfe1txq/mr-chibismmo-1.17%20-full-release-v2.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.17 ver. 2</a></li>
-
-						<li><a href="https://www.dropbox.com/s/wuxlma5u8ssoq1r/mr-chibismmo-1.17%20-full-release.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.17 ver. 1</a></li>
-					</ul>
-
-					<h6 class="dropmenu_title">Datapack Version 1.16:</h6>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/q302in9blflmyip/mr-chibismmo-1.16.5%20-full-release-v1.4.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.16.5</a></li>
-						<li><a href="https://www.dropbox.com/s/z8vp4ilup45s8pp/mr-chibismmo-1.16.4-v9.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.16.4</a></li>
-						<li><a href="https://www.dropbox.com/s/wvp2l7aknu5pn3w/mr-chibismmo-v1-5-full-release-1.16%20v6.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.16</a></li>	
+		<!-- -->
+		<div id="pack_overlay">
+			<section class="pack_modal" id="mmo_modal">
+				
+				<nav class="modal-nav">
+					<ul>
+						<button type="button" class="modal_close">X</button>
 					</ul>
 				</nav>
 
-
-				<section class="modal-content">
+				<header class="modal-heading">
 					<h1>Mr_Chibi's MMO</h1>
 					<p>Mr_Chibi'sMMO is a minecraft datapack! It's Singleplayer & Multiplayer Friendly! Players can level up, get effects from skills, and much more!</p>
+				</header>
 
-					<h2>What Unique Features does pack offer?</h2>
-					<ul>
-						<li>Killing Mobs, Cutting a tree, or any normal minecraft task grants players Experience.</li>
-						<li>Each player has there own individual sound setting & Skills.</li>
-						<li>Certain skills require levels to unlock secret effects or recipes.</li>
-						<li>Server Owners can disable Certain Skills or Features in the Gamerule Settings</li>
-					</ul>
-				</section>
-			</div>
-		</section>
 
-		
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
+				<div class="wrapper">
+					<aside class="modal-info">
+						<h3>What Unique Features does pack offer?</h3>
+						<ul>
+							<li>Killing Mobs, Cutting a tree, or any normal minecraft task grants players Experience.</li>
+							<li>Each player has there own individual sound setting & Skills.</li>
+							<li>Certain skills require levels to unlock secret effects or recipes.</li>
+							<li>Server Owners can disable Certain Skills or Features in the Gamerule Settings</li>
+						</ul>
+					</aside>
+
+
+					<nav class="modal-menu">
+						<h6 class="dropmenu_title">Resource Pack</h6>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/do8no70us0zlv9l/Mr_ChibisMMO_Pack_v1.zip?dl=0" target="_blank">Resoucepack ver. 1</a></li>
+						</ul>
+
+
+						<h6 class="dropmenu_title">Datapack Version 1.17:</h6>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/zudpwsz0vfe1txq/mr-chibismmo-1.17%20-full-release-v2.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.17 ver. 2</a></li>
+
+							<li><a href="https://www.dropbox.com/s/wuxlma5u8ssoq1r/mr-chibismmo-1.17%20-full-release.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.17 ver. 1</a></li>
+						</ul>
+
+						<h6 class="dropmenu_title">Datapack Version 1.16:</h6>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/q302in9blflmyip/mr-chibismmo-1.16.5%20-full-release-v1.4.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.16.5</a></li>
+							<li><a href="https://www.dropbox.com/s/z8vp4ilup45s8pp/mr-chibismmo-1.16.4-v9.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.16.4</a></li>
+							<li><a href="https://www.dropbox.com/s/wvp2l7aknu5pn3w/mr-chibismmo-v1-5-full-release-1.16%20v6.zip?dl=0" target="_blank">Mr_Chibi'sMMO 1.16</a></li>	
+						</ul>
+					</nav>
+				</div>
+			</section>
+
 			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/mmo_worldgen.png" />
-					</figure>
-
-					<h6 class="dropmenu_title">Datapack Version 1.17:</h6>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/0ehv3p3kojmyb3o/mr-chibismmo-worldgen-1-17-full-release.zip?dl=0" target="_blank">Mr_Chibi'sMMO World Genation 1.17</a></li>
+			<section class="pack_modal" id="mmo_worldgen_modal">
+				<nav class="modal-nav">
+					<ul>
+						<button type="button" class="modal_close">X</button>
 					</ul>
 				</nav>
 
-
-				<section class="modal-content">
+				<header class="modal-heading">
 					<h1>Mr_Chibi's World Generation</h1>
 					<ul>
 						<li>Mr_Chibi'sMMO World Genation is a minecraft datapack!</li>
 						<li>It's Single / Multiplayer Friendly!</li>
 					</ul>
+				</header>
 
-					<h2>What Unique Features does pack offer?</h2>
+				<div class="wrapper">
+					<section class="modal-info">
+						<h3>What Unique Features does pack offer?</h3>
+						<ul>
+							<li>Custom Structures</li>
+							<li>Custom Advancements</li>
+						</ul>
+
+						<h2>Pack Requirements:</h2>
+						<ul>
+							<li>Mr_Chibi'sMMO Datapack Installed</li>
+						</ul>
+					</section>
+
+
+					<nav class="modal-menu">
+
+						<h6 class="dropmenu_title">Datapack Version 1.17:</h6>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/0ehv3p3kojmyb3o/mr-chibismmo-worldgen-1-17-full-release.zip?dl=0" target="_blank">Mr_Chibi'sMMO World Genation 1.17</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+
+			<section class="pack_modal" id="player_shops_modal">
+				<nav class="modal-nav">
 					<ul>
-						<li>Custom Structures</li>
-						<li>Custom Advancements</li>
-					</ul>
-
-					<h2>Pack Requirements:</h2>
-					<ul>
-						<li>Mr_Chibi'sMMO Datapack Installed</li>
-					</ul>
-				</section>
-			</div>
-		</section>
-
-
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
-			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/player_shops.png" />
-					</figure>
-
-					<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/8qk0zzxit0dtiot/mr_chibis_player_shops%201.17.1_v3.zip?dl=0" target="_blank">Mr_Chibi's Player Shops 1.17.1</a></li>
-						<li><a href="https://www.dropbox.com/s/rb40ktyevkiw151/mr_chibis_player_shops%201.17.zip?dl=0" target="_blank">Mr_Chibi's Player Shops 1.17</a></li>
-					</ul>
-
-					<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/jsppi4rry9b7l6d/mr_chibis_player_shops%201.16.5.zip?dl=0" target="_blank">Mr_Chibi's Player Shops 1.16.5</a></li>
-						<li><a href="https://www.dropbox.com/s/btisa8dt226mkjv/mr_chibis_player_shops%201.16.4%20v1.1.zip?dl=0" target="_blank">Mr_Chibi's Player Shops 1.16.4</a></li>	
+						<button type="button" class="modal_close">X</button>
 					</ul>
 				</nav>
 
-
-				<section class="modal-content">
+				<header class="modal-heading">
 					<h2>Mr_Chibi's Player's Shops</h2>
+						<ul>
+							<li>Mr_Chibi's Player Shops is a minecraft datapack!</li>
+							<li>It's Singleplayer & Multiplayer Friendly!</li>
+							<li>Players can create shops using chest GUI and receive block, item and misc from secondary chest that spawns underneath the villager chest.</li>
+						</ul>
+				</header>
+
+				
+				<div class="wrapper">
+					<section class="modal-info">
+						<h3>What Unique Features does pack offer?</h3>
+						<ul>
+							<li>Player's can access the villager to trade and purchase player goods.</li>
+							<li>If Player, doesn't own shop they can't access chest GUI & Balance.</li>
+							<li>Player's Selling or Buying Items</li>
+							<li>Limited 7 Stacks per Trade!</li>
+							<li>Shops are linked to Player's UUID and cannot be removed from other players.</li>
+						</ul>
+
+						<h2>How it works:</h2>
+						<ul>
+							<li>Step 1: /trigger ps_create</li>
+							<li>Step 2: Right click chest villager is standing on</li>
+							<li>Step 3: [First Slot, (Buy)] [Second Slot, (Buy 2)] [Third Slot (Sell)]</li>
+							<li>Step 4: Trade villager</li>
+							<li>Step 5: Second chest under villager is where Items / money end up.</li>
+							<li>Step 6: /trigger ps_remove (If you don't want shop anymore it will remove it!)</li>
+						</ul>
+
+						<h3>How it was written in:</h3>
+						<ul>
+							<li>Json</li>
+							<li>Mcfunction</li>
+						</ul>
+					</section>
+
+
+					<nav class="modal-menu">
+
+						<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/8qk0zzxit0dtiot/mr_chibis_player_shops%201.17.1_v3.zip?dl=0" target="_blank">Mr_Chibi's Player Shops 1.17.1</a></li>
+							<li><a href="https://www.dropbox.com/s/rb40ktyevkiw151/mr_chibis_player_shops%201.17.zip?dl=0" target="_blank">Mr_Chibi's Player Shops 1.17</a></li>
+						</ul>
+
+						<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/jsppi4rry9b7l6d/mr_chibis_player_shops%201.16.5.zip?dl=0" target="_blank">Mr_Chibi's Player Shops 1.16.5</a></li>
+							<li><a href="https://www.dropbox.com/s/btisa8dt226mkjv/mr_chibis_player_shops%201.16.4%20v1.1.zip?dl=0" target="_blank">Mr_Chibi's Player Shops 1.16.4</a></li>	
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+
+			<section class="pack_modal" id="permissions_modal">
+				<nav class="modal-nav">
 					<ul>
-						<li>Mr_Chibi's Player Shops is a minecraft datapack!</li>
-						<li>It's Singleplayer & Multiplayer Friendly!</li>
-						<li>Players can create shops using chest GUI and receive block, item and misc from secondary chest that spawns underneath the villager chest.</li>
-					</ul>
-
-					<h2>What Unique Features does pack offer?</h2>
-					<ul>
-						<li>Player's can access the villager to trade and purchase player goods.</li>
-						<li>If Player, doesn't own shop they can't access chest GUI & Balance.</li>
-						<li>Player's Selling or Buying Items</li>
-						<li>Limited 7 Stacks per Trade!</li>
-						<li>Shops are linked to Player's UUID and cannot be removed from other players.</li>
-					</ul>
-
-					<h2>How it works:</h2>
-					<ul>
-						<li>Step 1: /trigger ps_create</li>
-						<li>Step 2: Right click chest villager is standing on</li>
-						<li>Step 3: [First Slot, (Buy)] [Second Slot, (Buy 2)] [Third Slot (Sell)]</li>
-						<li>Step 4: Trade villager</li>
-						<li>Step 5: Second chest under villager is where Items / money end up.</li>
-						<li>Step 6: /trigger ps_remove (If you don't want shop anymore it will remove it!)</li>
-					</ul>
-
-					<h2>How it was written in:</h2>
-					<ul>
-						<li>Json</li>
-						<li>Mcfunction</li>
-					</ul>
-				</section>
-			</div>
-		</section>
-
-
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
-			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/permissions.png" />
-					</figure>
-
-					<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/zmnaxal3x415hog/permissions_1.17.1_v3_full_release.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.17.1</a></li>
-						<li><a href="https://www.dropbox.com/s/17a50ti5oez1eho/permissions_1.17_full_release.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.17</a></li>
-					</ul>
-
-					<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/lsyx3gq5tc10y60/permissions_1.16.5_full_release_v1.5.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.16.5</a></li>
-						<li><a href="https://www.dropbox.com/s/kjhi8ovyhtvm0k0/permissions_1.16.4_v1.4.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.16.4</a></li>
-						<li><a href="https://www.dropbox.com/s/0a6j9gd3l1vzuqq/mrchibi%27s_permissions_full_release%201.16.3%20v4.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.16.3</a></li>
-						<li><a href="https://www.dropbox.com/s/k1adjmo8nci99qo/mrchibi%27s_permissions_full_release%201.16%20v9.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.16</a></li>
+						<button type="button" class="modal_close">X</button>
 					</ul>
 				</nav>
 
-
-				<section class="modal-content">
+				<header class="modal-heading">
 					<h2>Mr_Chibi's Permissions Essentials Overall:</h2>
 					<ul>
 						<li>This datapack was created for server owners of vanilla to have something close to spigot or paper. It includes: "Commands", "Limited Creative", "Ranks", & "Warps".</li>
 					</ul>
+				</header>
 
-					<h2>What Unique Features does pack offer?</h2>
+				
+				<div class="wrapper">
+					<section class="modal-info">
+						<h3>What Unique Features does pack offer?</h3>
+						<ul>
+							<li>Commands</li>
+							<li>Ranks</li>
+							<li>Limited Creative</li>
+							<li>Homes</li>
+							<li>Warps</li>
+							<li>Permissions</li>
+						</ul>
+					</section>
+
+
+					<nav class="modal-menu">
+						<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/zmnaxal3x415hog/permissions_1.17.1_v3_full_release.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.17.1</a></li>
+							<li><a href="https://www.dropbox.com/s/17a50ti5oez1eho/permissions_1.17_full_release.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.17</a></li>
+						</ul>
+
+						<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/lsyx3gq5tc10y60/permissions_1.16.5_full_release_v1.5.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.16.5</a></li>
+							<li><a href="https://www.dropbox.com/s/kjhi8ovyhtvm0k0/permissions_1.16.4_v1.4.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.16.4</a></li>
+							<li><a href="https://www.dropbox.com/s/0a6j9gd3l1vzuqq/mrchibi%27s_permissions_full_release%201.16.3%20v4.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.16.3</a></li>
+							<li><a href="https://www.dropbox.com/s/k1adjmo8nci99qo/mrchibi%27s_permissions_full_release%201.16%20v9.zip?dl=0" target="_blank">Mr_Chibi's Permissions 1.16</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+
+
+			<section class="pack_modal" id="claims_modal">
+				<nav class="modal-nav">
 					<ul>
-						<li>Commands</li>
-						<li>Ranks</li>
-						<li>Limited Creative</li>
-						<li>Homes</li>
-						<li>Warps</li>
-						<li>Permissions</li>
-					</ul>
-				</section>
-			</div>
-		</section>
-
-
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
-			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/storage.png" />
-					</figure>
-
-					<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/nljqzopa66s9n04/mr_chibis_storage_1.16.5_v1.2.zip?dl=0" target="_blank">Mr_Chibi's Storage 1.16.5</a></li>
+						<button type="button" class="modal_close">X</button>
 					</ul>
 				</nav>
-
-
-				<section class="modal-content">
-					<h2>Mr_Chibi’s Storage</h2>
-					<p>Mr_Chibi's Storage is a minecraft datapack! It's Singleplayer & Multiplayer Friendly!</p>
-
-
-					<h2>What Unique Features does pack offer?</h2>
-					<ul>
-						<li>Chest stores item nbt data</li>
-						<li>Sort Items</li>
-						<li>Custom NBT Icons</li>
-					</ul>
-				</section>
-			</div>
-		</section>
-
-
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
-			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/claims.png" />
-					</figure>
-					
-
-					<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/kfb93nnd7bf3u6j/claim_protection%201.17.1%20full%20release%20v1.zip?dl=0" target="_blank">Mr_Chibi's Claims 1.17.1</a></li>
-					</ul>
-
-					<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/r9y0bf1n8976dsw/claim_protection_1.16.4_v1.2.zip?dl=0" target="_blank">Mr_Chibi's Claims 1.16.4</a></li>
-						<li><a href="https://www.dropbox.com/s/y8ivw6bomt8q8md/claim_protection%201.16.3%20v4.zip?dl=0" target="_blank">Mr_Chibi's Claims 1.16.3</a></li>
-					</ul>
-				</nav>
-
-
-				<section class="modal-content">
+				
+				<header class="modal-heading">
 					<h2>Mr_Chibi's Claim Protection Datapack:</h2>
 					<p>Mr_Chibi's Claim Protection is a minecraft datapack! It's Singleplayer & Multiplayer Friendly! Players can claim there builds and receive claim integers to add more claims.</p>
+				</header>
 
 
-					<h2>What Unique Features does pack offer?</h2>
+				<div class="wrapper">
+					<section class="modal-info">
+						<h3>What Unique Features does pack offer?</h3>
+						<ul>
+							<li>Protection from others</li>
+							<li>Gain more claim integers to each hour to expand base</li>
+						</ul>
+					</section>
+
+
+					<nav class="modal-menu">
+						<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/kfb93nnd7bf3u6j/claim_protection%201.17.1%20full%20release%20v1.zip?dl=0" target="_blank">Mr_Chibi's Claims 1.17.1</a></li>
+						</ul>
+
+						<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/r9y0bf1n8976dsw/claim_protection_1.16.4_v1.2.zip?dl=0" target="_blank">Mr_Chibi's Claims 1.16.4</a></li>
+							<li><a href="https://www.dropbox.com/s/y8ivw6bomt8q8md/claim_protection%201.16.3%20v4.zip?dl=0" target="_blank">Mr_Chibi's Claims 1.16.3</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+
+			<section class="pack_modal" id="mcedit_modal">
+				<nav class="modal-nav">
 					<ul>
-						<li>Protection from others</li>
-						<li>Gain more claim integers to each hour to expand base</li>
-					</ul>
-				</section>
-			</div>
-		</section>
-
-
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
-			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/dimensions.png" />
-					</figure>
-
-					<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/9u7jcadma88lzns/chibipack_1.16.4_v1.zip?dl=0" target="_blank">Mr_Chibi's Dimensions 1.16.4</a></li>
-						<li><a href="https://www.dropbox.com/s/6yjy6zaulecl1xi/chibipack_1.16.3_v8.zip?dl=0" target="_blank">Mr_Chibi's Dimensions 1.16.3</a></li>
-						<li><a href="https://www.dropbox.com/s/85tyz8843k2i92c/chibipack_1.16.2_v5.zip?dl=0" target="_blank">Mr_Chibi's Dimensions 1.16.2</a></li>	
+						<button type="button" class="modal_close">X</button>
 					</ul>
 				</nav>
 
-
-				<section class="modal-content">
-					<h1>Mr_Chibi's Custom Dimensions and Biomes</h1>
-					<p>There's no description avaliable at this time.</p>
-				</section>
-			</div>
-		</section>
-
-
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
-			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/player_shops.png" />
-					</figure>
-
-					<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/15238rwlnvp4mb9/mr_chibis_map_assets_full_release_v1.1.zip?dl=0" target="_blank">Mr_Chibi's Map Assets 1.16.5</a></li>	
-					</ul>
-				</nav>
-
-
-				<section class="modal-content">
-					<h1>Mr_Chibi's Map Assets Datapack:</h1>
-					<ul>
-						<li>It's Singleplayer & Multiplayer Friendly!</li>
-					</ul>
-
-					<h1>What Unique Features does pack offer?</h1>
-					<ul>
-						<li>Map Making</li>
-						<li>Player Effects</li>
-						<li>Minigame Ideas</li>
-					</ul>
-				</section>
-			</div>
-		</section>
-
-
-
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
-			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/mcedit.png" />
-					</figure>
-
-					<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/4yqpaeoy0emhbep/chibi_edit_full_release_v2.zip?dl=0" target="_blank">1.17.1 Ver. 2</a></li>
-						<li><a href="https://www.dropbox.com/s/e26an7k3v7hlx6w/chibi_edit_full_release_v1.zip?dl=0" target="_blank">1.17.1 Ver. 1</a></li>
-					</ul>
-				</nav>
-
-
-				<section class="modal-content">
+				<header class="modal-heading">
 					<h1>ChibiEdit</h1>
 					<p>Mr_Chibi's Edit is a minecraft datapack! It's Singleplayer Friendly!</p>
+				</header>
+				
 
-					<h2>What Unique Features does pack offer?</h2>
+				<div class="wrapper">
+					<section class="modal-info">
+						<h3>What Unique Features does pack offer?</h3>
+						<ul>
+						  <li>Loading Structures</li>
+						  <li>Creating Walls</li>
+						  <li>Block States or modes</li>
+						  <li>Copy & Paste</li>
+						  <li>Clearing Selections</li>
+						  <li>Circle Outlines</li>
+						  <li>Spheres</li>
+						</ul>
+
+						<h3>How it was written in:</h3>
+						<ul>
+						  <li>Json</li>
+						  <li>Mcfunction</li>
+						</ul>
+					</section>
+
+
+					<nav class="modal-menu">
+						<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/4yqpaeoy0emhbep/chibi_edit_full_release_v2.zip?dl=0" target="_blank">1.17.1 Ver. 2</a></li>
+							<li><a href="https://www.dropbox.com/s/e26an7k3v7hlx6w/chibi_edit_full_release_v1.zip?dl=0" target="_blank">1.17.1 Ver. 1</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+
+
+			<section class="pack_modal" id="murder_minigame_modal">
+				<nav class="modal-nav">
 					<ul>
-					  <li>Loading Structures</li>
-					  <li>Creating Walls</li>
-					  <li>Block States or modes</li>
-					  <li>Copy & Paste</li>
-					  <li>Clearing Selections</li>
-					  <li>Circle Outlines</li>
-					  <li>Spheres</li>
-					</ul>
-
-					<h2>How it was written in:</h2>
-					<ul>
-					  <li>Json</li>
-					  <li>Mcfunction</li>
-					</ul>
-				</section>
-			</div>
-		</section>
-
-
-
-		<section class="modal">
-			<nav class="model-nav">
-				<ul>
-					<li class="cls-modal">X</li>
-				</ul>
-			</nav>
-			
-			<div class="modal-grid">
-				<nav class="modal-menu">
-					<figure>
-						<img src="images/datapacks/murder_minigame.png" />
-					</figure>
-
-					<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
-					<ul class="dropmenu_section">
-						<li><a href="https://www.dropbox.com/s/h9qpikhbgwsx9b5/murder_minigame_v1_full_release_v2.zip?dl=0" target="_blank">1.17.1 ver. 1</a></li>
+						<button type="button" class="modal_close">X</button>
 					</ul>
 				</nav>
 
-
-				<section class="modal-content">
+				<header class="modal-heading">
 					<h1>MrChibis Murder Minigame</h1>
 					<p>This datapack was created for server owners to have something new and fun to experience with there community! Players can either be "innocent", "murderer", or "detective"! They must kill the murderers in order to win the minigame!</p>
 
 					<p>Build your own maps using my map creator assets to provide your community with something new and inspiring!</p>
+				</header>
 
-					<h2>What Unique Features does pack offer?</h2>
-					<ul>
-					  <li>Roles</li>
-					  <li>Tools</li>
-					  <li>Map Assets</li>
-					</ul>
+				
+				<div class="wrapper">
+					<section class="modal-info">
+						<h3>What Unique Features does pack offer?</h3>
+						<ul>
+						  <li>Roles</li>
+						  <li>Tools</li>
+						  <li>Map Assets</li>
+						</ul>
 
-					<h2>How it was written in:</h2>
+						<h3>How it was written in:</h3>
+						<ul>
+						  <li>Json</li>
+						  <li>Mcfunction</li>
+						</ul>
+					</section>
+
+
+					<nav class="modal-menu">
+						<h4 class="dropmenu_title">Datapack Version 1.17:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/h9qpikhbgwsx9b5/murder_minigame_v1_full_release_v2.zip?dl=0" target="_blank">1.17.1 ver. 1</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+
+			<section class="pack_modal" id="assets_modal">
+				<nav class="modal-nav">
 					<ul>
-					  <li>Json</li>
-					  <li>Mcfunction</li>
+						<button type="button" class="modal_close">X</button>
 					</ul>
-				</section>
-			</div>
+				</nav>
+
+				<header class="modal-heading">
+					<h1>Mr_Chibi's Map Assets Datapack:</h1>
+					<ul>
+						<li>It's Singleplayer & Multiplayer Friendly!</li>
+					</ul>
+				</header>
+				
+
+				<div class="wrapper">
+					<section class="modal-info">
+						<h3>What Unique Features does pack offer?</h3>
+						<ul>
+							<li>Map Making</li>
+							<li>Player Effects</li>
+							<li>Minigame Ideas</li>
+						</ul>
+					</section>
+
+
+					<nav class="modal-menu">
+						<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/15238rwlnvp4mb9/mr_chibis_map_assets_full_release_v1.1.zip?dl=0" target="_blank">Mr_Chibi's Map Assets 1.16.5</a></li>	
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+
+
+			<section class="pack_modal" id="dimensions_modal">
+				<nav class="modal-nav">
+					<ul>
+						<button type="button" class="modal_close">X</button>
+					</ul>
+				</nav>
+
+				<header class="modal-heading">
+					<h1>Mr_Chibi's Custom Dimensions and Biomes</h1>
+					<p>There's no description avaliable at this time.</p>
+				</header>
+				
+
+				<div class="wrapper">
+					<section class="modal-info"></section>
+
+
+					<nav class="modal-menu">
+						<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/9u7jcadma88lzns/chibipack_1.16.4_v1.zip?dl=0" target="_blank">Mr_Chibi's Dimensions 1.16.4</a></li>
+							<li><a href="https://www.dropbox.com/s/6yjy6zaulecl1xi/chibipack_1.16.3_v8.zip?dl=0" target="_blank">Mr_Chibi's Dimensions 1.16.3</a></li>
+							<li><a href="https://www.dropbox.com/s/85tyz8843k2i92c/chibipack_1.16.2_v5.zip?dl=0" target="_blank">Mr_Chibi's Dimensions 1.16.2</a></li>	
+						</ul>
+					</nav>
+				</div>
+			</section>
+
+
+			<section class="pack_modal" id="storage_modal">
+				<nav class="modal-nav">
+					<ul>
+						<button type="button" class="modal_close">X</button>
+					</ul>
+				</nav>
+
+				<header class="modal-heading">
+					<h2>Mr_Chibi’s Storage</h2>
+					<p>Mr_Chibi's Storage is a minecraft datapack! It's Singleplayer & Multiplayer Friendly!</p>
+				</header>
+
+				
+				<div class="wrapper">
+					<section class="modal-info">
+						<h3>What Unique Features does pack offer?</h3>
+						<ul>
+							<li>Chest stores item nbt data</li>
+							<li>Sort Items</li>
+							<li>Custom NBT Icons</li>
+						</ul>
+					</section>
+
+
+					<nav class="modal-menu">
+						<h4 class="dropmenu_title">Datapack Version 1.16:</h4>
+						<ul class="dropmenu_section">
+							<li><a href="https://www.dropbox.com/s/nljqzopa66s9n04/mr_chibis_storage_1.16.5_v1.2.zip?dl=0" target="_blank">Mr_Chibi's Storage 1.16.5</a></li>
+						</ul>
+					</nav>
+				</div>
+			</section>
 		</section>
 	</div>
 
 
 	<footer>
-		<div class="wrapper text-center">
-			<p>Webpage Created in HTML/CSS, By Mr_Chibi<br />
+		<div class="wrapper">
+			<p align="center">Webpage Created in HTML/CSS, By Mr_Chibi<br />
 			Minecraft is copyrighted by Mojang Studios and isn't associated with this site.</p>
 		</div>
 	</footer>
 
-	<!-- Searchbar Js -->	
-	<script type="text/javascript" src="js/searchbar.js"></script>
-	<script type="text/javascript">
-
-		// Setup Array of Packs:
-		packs("mmo.png", "mmo");
-		packs("mmo_worldgen.png", "worldgen");
-		packs("player_shops.png", "player shops");
-		packs("permissions.png", "permissions");
-		packs("storage.png", "storage");
-		packs("claims.png", "claims");
-		packs("dimensions.png", "dimensions");
-		packs("assets.png", "assets");
-		packs("mcedit.png", "mcedit");
-		packs("murder_minigame.png", "murder_minigame");
-
-		// Count Datapacks:
-		let count_datapacks = document.getElementById("count_datapacks");
-		let datapacks = document.getElementsByClassName("datapacks");
-		count_datapacks.innerHTML=datapacks.length;
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+		packs.search_results();
+		packs.list_packs();
 	</script>
-
-	<!-- Modals & Dropmenus -->
-	<script type="text/javascript" src="js/toggle_modal.js"></script>
-	<script type="text/javascript" src="js/toggle_section.js"></script>
-	<script type="text/javascript" src="js/pages.js"></script>
 </body>
 </html>
