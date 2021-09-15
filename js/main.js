@@ -158,5 +158,3 @@ class dp_search {
 		});
 	}
 }
-let packs = new dp_search;
-packs.total();

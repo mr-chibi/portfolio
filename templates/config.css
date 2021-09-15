@@ -13,8 +13,13 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,button {
+	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
+}
+
+button {
+	cursor: pointer;
 }
 
 h1 { font-size: 26pt; }
@@ -29,7 +34,7 @@ a {
 }
 
 .white {
-	color: #fefefe;
+	background: #fefefe;
 }
 
 .red {
@@ -59,6 +64,7 @@ button,input,select {
 }
 
 figure {
+	position: relative;
 	margin: 0;
 }
 
@@ -66,6 +72,16 @@ figure img {
 	display: block;
 	max-width: 100%;
 	height: auto;
+}
+
+figure figcaption.caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.50);
+	color: #efefef;
+	padding: 3%;
 }
 
 form fieldset {
@@ -89,7 +105,7 @@ form fieldset input {
 	flex-direction: row;
 	margin: auto;
 	max-width: 1200px;
-	padding: 1.2%;
+	padding: 1.5%;
 }
 
 .flex-row {
@@ -104,9 +120,19 @@ form fieldset input {
 	align-items: center;
 }
 
+.flex-text-center {
+	display: flex;
+	height: 85%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
 header.heading {
 	position: relative;
-	background: url('../images/highlight.png') center center fixed;
+	background: #12326E url('../images/highlight.png') no-repeat center center;
+	background-size: cover;
+	height: 75vh;
 }
 
 header.heading-2 {
@@ -173,14 +199,9 @@ nav.navigation ul.nav-wrapper li.active {
 	border-bottom: 1px solid #5D8FFF;
 }
 
-#welcome p {
-	padding: 1%;
-}
-
 button.read_more {
 	display: block;
-	width: 50%;
-	padding: 5%;
+	padding: 4% 10%;
 	background: #F9D300;
 	color: #101010;
 }
@@ -202,16 +223,8 @@ header.heading button.scroll {
 }
 
 figure.feat-img {
-	height: 230px;
-}
-
-figure.feat-img:nth-child(1) { background: url('../images/thumbnails/mmo.png') center center no-repeat; background-size: cover; }
-figure.feat-img:nth-child(2) { background: url('../images/thumbnails/mmo_worldgen.png') center center no-repeat; background-size: cover; }
-figure.feat-img:nth-child(3) { background: url('../images/thumbnails/permissions.png') center center no-repeat; background-size: cover; }
-figure.feat-img:nth-child(4) { background: url('../images/thumbnails/player_shops.png') center center no-repeat; background-size: cover; }
-
-figure.feat-img:hover {
-	animation: zoom 500ms;
+	height: 309px;
+	box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.25);
 }
 
 section#search-packs {
@@ -223,20 +236,19 @@ section#search-packs {
 .col3 {
 	margin: 1%;
 	padding: 1%;
-	width: 26%;
+	width: 28%;
 }
 
 .col4 {
 	margin: 1%;
 	padding: 1%;
-	width: 21%;
+	width: 36%;
 }
 
 .col5 {
 	margin: 1%;
 	padding: 1%;
-	width: 40%;
-	border: 1px solid red;
+	width: 46%;
 }
 
 .col6 {
@@ -395,9 +407,10 @@ button.modal_close {
 
 
 footer {
-	padding: 2%;
+	padding: 1%;
 	color: #fefefe;
-	background: #1B253D;
+	background: #1D1D1D;
+	text-transform: uppercase;
 }
 
 @keyframes fadeIn {
